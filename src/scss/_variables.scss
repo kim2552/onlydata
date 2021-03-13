@@ -1,0 +1,95 @@
+// Typography
+$font-family: 'Arial', 'sans-serif';
+$font-size-lg: 16px;
+$font-size-md: 16px;
+$font-size-sm: 12px;
+
+
+// Animation
+$loading-time: 1s;
+
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+
+// Color Scheme
+$primary-color: #d8d8d8;//#252D48;
+$secondary-color: #000000;
+$tertiary-color: #2469FF;//#3C4562;
+
+
+// Environment Specific Colors
+$body-bg-color: $primary-color;
+$header-color: $secondary-color;
+$button-color: $tertiary-color;
+$card-color: $tertiary-color;
+$text-light-color: $white;
+$text-dark-color: $black;
+
+
+// Spacing large
+$container-padding-lg: 5rem;
+$container-margin-lg: 10rem;
+
+$description-padding-lg: 5rem;
+$description-margin-lg: 7rem;
+
+$image-padding-lg: 5rem;
+$image-margin-lg: 7rem;
+$image-size-lg: 20rem;
+$logo-size-lg: 3rem;
+
+$header-padding-lg: 5rem;
+$header-margin-lg: 5rem;
+
+$button-padding-lg: 2rem;
+$button-margin-lg: 2rem;
+
+
+// Spacing medium
+$container-padding-md: 2rem;
+$container-margin-md: 2rem;
+
+$description-padding-md: 2rem;
+$description-margin-md: 5rem;
+
+$image-padding-md: 2rem;
+$image-margin-md: 5rem;
+$image-size-md: 15rem;
+$logo-size-md: 3rem;
+
+$header-padding-md: 2rem;
+$header-margin-md: 2rem;
+
+$button-padding-md: 1rem;
+$button-margin-md: 1rem;
+
+// Spacing small
+$container-padding-sm: 1rem;
+$container-margin-sm: 1rem;
+
+$description-padding-sm: 1rem;
+$description-margin-sm: 1rem;
+
+$image-padding-sm: 1rem;
+$image-margin-sm: 1rem;
+$image-size-sm: 10rem;
+$logo-size-sm: 2rem;
+
+$header-padding-sm: 1rem;
+$header-margin-sm: 1rem;
+
+$button-padding-sm: 0.5rem;
+$button-margin-sm: 0.5rem;

@@ -1,0 +1,22 @@
+{
+    "posts":[
+        {
+            "id": 1,
+            "title": "Canada Covid-19 Data",
+            "slug": "canada-covid-19-data",
+            "description": "Information on the current data regarding Covid-19 cases in Canada."
+        },
+        {
+            "id": 2,
+            "title": "Canada Unemployment Data",
+            "slug": "canada-unemployment-data",
+            "description": "Information on the current data regarding unemployment in Canada."
+        },
+        {
+            "id": 3,
+            "title": "Canada Engineering Graduate Data",
+            "slug": "canada-engineering-graduate-data",
+            "description": "Information on the current data and trends regarding Engineering Graduates in Canada."
+        }
+    ]
+}

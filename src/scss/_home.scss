@@ -1,0 +1,48 @@
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: $container-margin-lg;
+
+    .card-wrapper{
+        background-color: $card-color;
+        color: $text-light-color;
+
+        border-radius: 1rem;
+
+        margin: $description-margin-lg;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        padding: $description-padding-lg;
+
+        a{
+            color: darken($white, 25%);
+            font-size: 2rem;
+        }
+        a:hover{
+            color:$white;
+        }
+    }
+
+    .card-wrapper:hover{
+        box-shadow: 1rem 1rem $black;
+        animation: shadow_load 0.5s ease;
+    }
+
+    @media only screen and (max-width: 1280px) {
+        margin: $container-margin-md;
+        .card-wrapper{
+            margin: $description-margin-md;
+            padding: $description-padding-md;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        margin: $container-margin-sm;
+        .card-wrapper{
+            margin: $description-margin-sm;
+            padding: $description-padding-sm;
+        }
+    }
+}
