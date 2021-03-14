@@ -1,7 +1,7 @@
 import React from 'react'
 import Papa from 'papaparse'
 
-import {createLineChart,createBarChart,createHorizontalBarChart} from '../charts/CreateChart'
+import {createBarChart} from '../charts/CreateChart'
 import canada_employment_timeline_data from '../../assets/canada-employment-timeline-data.csv'
 import canada_unemployment_timeline_data from '../../assets/canada-unemployment-timeline-data.csv'
 
