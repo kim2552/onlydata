@@ -5,7 +5,7 @@ import datetime
 import json
 
 CSV_URL = "https://health-infobase.canada.ca/src/data/covidLive/covid19-download.csv"
-FILE_PATH = "../src/assets/"
+FILE_PATH = "src/assets/"
 
 def create_canada_covid19_data_per_day():
     response = urlopen(CSV_URL)
