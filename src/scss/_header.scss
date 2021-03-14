@@ -61,6 +61,7 @@
 
     @media only screen and (max-width: 768px) { //TODO:Create responsive navbar
         flex-direction: column;
+        justify-content: center;
 
         .menu-item{
             padding: $button-margin-sm;
