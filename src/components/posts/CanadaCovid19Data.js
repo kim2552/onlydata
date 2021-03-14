@@ -70,7 +70,8 @@ const CanadaCovid19Data = (props) => {
                     <h3>Current Active Covid-19 Cases by Province/Territory</h3>
                 </div>
                 <canvas id="province_active_current_data" ref={chartRef}></canvas>
-                <div className="description-wrapper">
+            </div>
+            <div className="description-wrapper">
                 <p>
                     {props.data.description}
                 </p>
@@ -78,7 +79,6 @@ const CanadaCovid19Data = (props) => {
                     Last updated: {props.data.last_updated}
                 </p>
                 <a href={props.data.source} rel="noreferrer" target="_blank">source</a>
-                </div>
             </div>
         </div>
     )
