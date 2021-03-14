@@ -4,7 +4,7 @@ import codecs
 import datetime
 import json
 #Number of persons of working age, 25 years and over. Estimates in thousands, rounded to the nearest hundred.
-FILE_PATH = "../src/assets/"
+FILE_PATH = "src/assets/"
 
 def get_previous_month_date():
     today = datetime.date.today()
