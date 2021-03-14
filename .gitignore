@@ -24,3 +24,4 @@ yarn-error.log*
 
 # data files
 *.csv
+/od_env
