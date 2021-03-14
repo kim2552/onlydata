@@ -10,6 +10,7 @@ def get_previous_month_date():
     today = datetime.date.today()
     first = today.replace(day=1)
     lastMonth = first - datetime.timedelta(days=1)
+    update_date(lastMonth.strftime("%Y-%m-01"))
     return (lastMonth.strftime("%Y%m01"))
 
 def get_current_url(desired_date):
@@ -65,7 +66,7 @@ def update_date(new_date):
     json_file = open(FILE_PATH+'posts.json', "r")
     data = json.load(json_file)
     for d in data['posts']:
-        if(d['slug'] == 'canada-covid-19-data'):
+        if(d['slug'] == 'canada-employment-data'):
             d['last_updated'] = new_date
     json_file.close()
 
