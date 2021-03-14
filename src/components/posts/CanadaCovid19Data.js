@@ -2,10 +2,10 @@ import React from 'react'
 import Papa from 'papaparse'
 
 import {createLineChart,createBarChart,createHorizontalBarChart} from '../charts/CreateChart'
-import canada_total_data from '../../data/canada-covid-19-data-total.csv'
-import canada_total_per_day_data from '../../data/canada-covid-19-data-per-day.csv'
-import province_total_current_data from '../../data/province-covid-19-data-by-province.csv'
-import province_active_current_data from '../../data/province-covid-19-active-data-by-province.csv'
+import canada_total_data from '../../assets/canada-covid-19-data-total.csv'
+import canada_total_per_day_data from '../../assets/canada-covid-19-data-per-day.csv'
+import province_total_current_data from '../../assets/province-covid-19-data-by-province.csv'
+import province_active_current_data from '../../assets/province-covid-19-active-data-by-province.csv'
 
 const CanadaCovid19Data = (props) => {
     const chartRef = React.createRef();
@@ -47,35 +47,38 @@ const CanadaCovid19Data = (props) => {
             <div className="title-wrapper" style={{marginBottom: "5rem"}}>
                 <h1>{props.data.title}</h1>
             </div>
-            <div className="heading-wrapper">
-                <h3>Total Number of Confirmed Covid-19 Cases per Day</h3>
-            </div>
             <div className="chart-wrapper">
+                <div className="heading-wrapper">
+                    <h3>Total Number of Confirmed Covid-19 Cases per Day</h3>
+                </div>
                 <canvas id="canada_total_per_day_data" ref={chartRef}></canvas>
             </div>
-            <div className="heading-wrapper">
-                <h3>Total Number of Confirmed Covid-19 Cases Since The Beginning</h3>
-            </div>
             <div className="chart-wrapper">
+                <div className="heading-wrapper">
+                    <h3>Total Number of Confirmed Covid-19 Cases Since The Beginning</h3>
+                </div>
                 <canvas id="canada_total_data" ref={chartRef}></canvas>
             </div>
-            <div className="heading-wrapper">
-                <h3>Current Total Number of Confirmed Covid-19 Cases by Province</h3>
-            </div>
             <div className="chart-wrapper">
+                <div className="heading-wrapper">
+                    <h3>Current Total Number of Confirmed Covid-19 Cases by Province/Territory</h3>
+                </div>
                 <canvas id="province_total_current_data" ref={chartRef}></canvas>
             </div>
-            <div className="heading-wrapper">
-                <h3>Current Active Covid-19 Cases by Province</h3>
-            </div>
             <div className="chart-wrapper">
+                <div className="heading-wrapper">
+                    <h3>Current Active Covid-19 Cases by Province/Territory</h3>
+                </div>
                 <canvas id="province_active_current_data" ref={chartRef}></canvas>
-            </div>
-            <div className="description-wrapper">
+                <div className="description-wrapper">
                 <p>
                     {props.data.description}
                 </p>
+                <p>
+                    Last updated: {props.data.last_updated}
+                </p>
                 <a href={props.data.source} rel="noreferrer" target="_blank">source</a>
+                </div>
             </div>
         </div>
     )
