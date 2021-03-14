@@ -30,17 +30,26 @@ function App() {
         <Header></Header>
         <div className="content-container">
           <Switch>
-            <Route path="/about">
+            <Route exact path="/about">
               <About></About>
             </Route>
-            <Route path="/canada-covid-19-data">
+            <Route exact path="/canada-covid-19-data">
               <CanadaCovid19Data data={getJSONData("canada-covid-19-data")}></CanadaCovid19Data>
             </Route>
-            <Route path="/canada-employment-data">
+            <Route exact path="/canada-employment-data">
               <CanadaEmploymentData data={getJSONData("canada-employment-data")}></CanadaEmploymentData>
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home posts={posts}></Home>
+            </Route>
+            <Route path="/">
+              <div className="description-container">
+                <div style={{textAlign: "center", margin: "auto"}}>
+                  <p>
+                    Page does not exist.
+                  </p>
+                </div>
+              </div>
             </Route>
           </Switch>
         </div>
