@@ -41,7 +41,7 @@ const CanadaEmploymentData = (props) => {
                 </div>
                 <canvas id="canada_employment_timeline_data" ref={chartRef}></canvas>
                 <p>
-                    Employment rate is a percentage of employment vs population 25 years of age and over. Employment includes both full-time and part-time employment. Data type is seasonally adjusted.
+                    Employment rate is a percentage of number of employed to the population 25 years of age and over. Employment includes both full-time and part-time employment. Data type is seasonally adjusted.
                 </p>
             </div>
             <div className="chart-wrapper">
@@ -50,7 +50,7 @@ const CanadaEmploymentData = (props) => {
                 </div>
                 <canvas id="canada_unemployment_timeline_data" ref={chartRef}></canvas>
                 <p>
-                    Unemployment rate is a percentage of employment vs population 25 years of age and over. Employment includes both full-time and part-time employment. Data type is seasonally adjusted.
+                    Unemployment rate is a percentage of number of unemployed to the population 25 years of age and over. Data type is seasonally adjusted.
                 </p>
             </div>
             <div className="description-wrapper">
