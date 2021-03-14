@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 
 import CanadaCovid19Data from './components/posts/CanadaCovid19Data'
+import CanadaEmploymentData from './components/posts/CanadaEmploymentData'
 
 import posts_data from './assets/posts.json';
 
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route path="/canada-covid-19-data">
               <CanadaCovid19Data data={getJSONData("canada-covid-19-data")}></CanadaCovid19Data>
+            </Route>
+            <Route path="/canada-employment-data">
+              <CanadaEmploymentData data={getJSONData("canada-employment-data")}></CanadaEmploymentData>
             </Route>
             <Route path="/">
               <Home posts={posts}></Home>
