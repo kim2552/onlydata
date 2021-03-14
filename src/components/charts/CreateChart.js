@@ -137,7 +137,7 @@ export function createBarChart(json_data,reference) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: dep_header,
+                        labelString: indep_header,
                         fontColor: "black",
                         fontStyle: "bold",
                         fontFamily: "Arial"
@@ -153,7 +153,7 @@ export function createBarChart(json_data,reference) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: indep_header,
+                        labelString: dep_header,
                         fontColor: "black",
                         fontStyle: "bold",
                         fontFamily: "Arial"
