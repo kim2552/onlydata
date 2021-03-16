@@ -3,7 +3,7 @@ from urllib.request import urlopen
 import codecs
 import datetime
 import json
-#Number of persons of working age, 25 years and over. Estimates in thousands, rounded to the nearest hundred.
+#Number of persons of working age, 15 years and over. Estimates in thousands, rounded to the nearest hundred. Data type is seasonally adjusted.
 FILE_PATH = "src/assets/"
 
 def get_previous_month_date():
@@ -13,15 +13,14 @@ def get_previous_month_date():
     update_date(lastMonth.strftime("%Y-%m-01"))
     return (lastMonth.strftime("%Y%m01"))
 
-def get_current_url(desired_date):
-    current_url_pt1 = "https://www150.statcan.gc.ca/t1/tbl1/en/dtl!downloadDbLoadingData.action?pid=1410028703&latestN=0&startDate="
-    current_url_pt2 = "&endDate="
-    current_url_pt3 = "&csvLocale=en&selectedMembers=%5B%5B%5D%2C%5B1%2C7%2C9%5D%2C%5B%5D%2C%5B5%5D%2C%5B1%5D%2C%5B1%5D%5D&checkedLevels=0D1%2C0D2%2C1D2%2C1D3%2C1D4%2C2D1%2C2D2"
-    return (current_url_pt1+desired_date+current_url_pt2+desired_date+current_url_pt3)
+def get_current_url():
+    current_url = "https://www150.statcan.gc.ca/t1/tbl1/en/dtl!downloadDbLoadingData-nonTraduit.action?pid=1410028703&latestN=5&startDate=&endDate=&csvLocale=en&selectedMembers=%5B%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%5D%2C%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%5D%2C%5B1%5D%2C%5B1%5D%2C%5B1%5D%2C%5B1%5D%5D"
+    return (current_url)
 
 def get_canada_alltime_url(desired_date):
+    print(desired_date)
     current_url_pt1 = "https://www150.statcan.gc.ca/t1/tbl1/en/dtl!downloadDbLoadingData-nonTraduit.action?pid=1410028703&latestN=0&startDate=20050101&endDate="
-    current_url_pt2 = "&csvLocale=en&selectedMembers=%5B%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%5D%2C%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%5D%2C%5B1%5D%2C%5B5%5D%2C%5B1%5D%2C%5B1%5D%5D"
+    current_url_pt2 = "&csvLocale=en&selectedMembers=%5B%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%5D%2C%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%5D%2C%5B1%5D%2C%5B1%5D%2C%5B1%5D%2C%5B1%5D%5D"
     return (current_url_pt1+desired_date+current_url_pt2)
 
 def create_canada_employment_timeline():
