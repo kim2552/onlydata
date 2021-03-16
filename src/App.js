@@ -9,6 +9,7 @@ import About from './components/About';
 
 import CanadaCovid19Data from './components/posts/CanadaCovid19Data'
 import CanadaEmploymentData from './components/posts/CanadaEmploymentData'
+import CanadaTuitionFeeData from './components/posts/CanadaTuitionFeeData'
 
 import posts_data from './assets/posts.json';
 
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/canada-employment-data">
               <CanadaEmploymentData data={getJSONData("canada-employment-data")}></CanadaEmploymentData>
+            </Route>
+            <Route exact path="/canada-undergraduate-tuition-data">
+              <CanadaTuitionFeeData data={getJSONData("canada-undergraduate-tuition-data")}></CanadaTuitionFeeData>
             </Route>
             <Route exact path="/">
               <Home posts={posts}></Home>
