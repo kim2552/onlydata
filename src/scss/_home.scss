@@ -27,7 +27,7 @@
     }
 
     .card-wrapper:hover{
-        box-shadow: 1rem 1rem $black;
+        box-shadow: 0 0 1rem $black;
         animation: shadow_load 0.5s ease;
     }
 
