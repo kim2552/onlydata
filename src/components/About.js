@@ -10,7 +10,7 @@ const About = () => {
                     OnlyData is a data visualization application that aims at delivering information through aesthic charts. Sources for the data are all referenced and taken from credible sources.
                 </p>
                 <p>
-                    Developed by David Kim
+                    Developed by <a href="https://kimd.dev" rel="noreferrer" target="_blank">David Kim</a>
                 </p>
             </div>
         </div>
