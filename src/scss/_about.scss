@@ -1,7 +1,3 @@
-a{
-    text-decoration: underline;
-}
-
 .description-wrapper{
     align-content: left;
 
@@ -10,6 +6,9 @@ a{
 
     margin: $description-margin-lg;
     padding: $description-padding-lg;
+    a{
+        text-decoration: underline;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
