@@ -7,10 +7,12 @@ import json
 CSV_URL = "https://health-infobase.canada.ca/src/data/covidLive/covid19-download.csv"
 FILE_PATH = "src/assets/"
 
-def create_canada_covid19_data_per_day():
+selection_list = [ "Canada", "British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario", "Quebec", "Newfoundland and Labrador", "New Brunswick", "Nova Scotia", "Prince Edward Island", "Yukon", "Northwest Territories", "Nunavut"]
+
+def create_selection_covid19_data_per_day(selection="Canada"):
     response = urlopen(CSV_URL)
     csv_reader = csv.reader(codecs.iterdecode(response, 'utf-8'), delimiter=',')
-    f = open(FILE_PATH+'canada-covid-19-data-per-day.csv','w', newline='')
+    f = open(FILE_PATH+selection.lower()+'-covid-19-data-per-day.csv','w', newline='')
     writer = csv.writer(f)
     line_count = 0
     desired_row = 0
@@ -21,7 +23,7 @@ def create_canada_covid19_data_per_day():
             for index,header in enumerate(row):
                 if(header == "numtoday"):
                     desired_row = index
-        elif( row[1] == 'Canada' ):
+        elif( row[1].lower() == selection.lower() ):
             writer.writerow([row[3], row[desired_row]])
             line_count += 1
     f.close()
@@ -108,10 +110,13 @@ def update_date(new_date):
     new_json_file.close()
 
 def generate_canada_covid19_data():
-    create_canada_covid19_data_per_day()
-    create_canada_covid19_data_total()
-    create_canada_covid19_data_by_province()
-    create_canada_covid19_active_data_by_province()
+
+    for selection in selection_list:
+        create_selection_covid19_data_per_day(selection)
+
+    # create_canada_covid19_data_total()
+    # create_canada_covid19_data_by_province()
+    # create_canada_covid19_active_data_by_province()
 
 
 generate_canada_covid19_data()
