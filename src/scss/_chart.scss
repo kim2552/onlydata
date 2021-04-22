@@ -20,6 +20,21 @@
         margin-top:0.1rem;
     }
 
+    .carousel{
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        li{
+            background-color: $button-color;
+            padding: $button-padding-sm;
+            border-radius: 0.5rem;
+            color: $text-light-color;
+            cursor: pointer;
+        }
+    }
+
     @media screen and (max-width: 1280px) {
         padding: $container-margin-md;
 
