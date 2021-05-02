@@ -35,6 +35,11 @@ def create_canada_covid19_data_total():
     writer = csv.writer(f)
     line_count = 0
     desired_row = 0
+
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+    yesterdays_date = yesterday.strftime('%Y-%m-%d')
+    update_date(yesterdays_date)
+
     for row in csv_reader:
         if line_count == 0:
             writer.writerow(['Date','Number of Confirmed Cases'])
