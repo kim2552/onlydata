@@ -20,6 +20,7 @@ import yt_total_per_day_data from '../../assets/yukon-covid-19-data-per-day.csv'
 export class TestPost extends Component {
     constructor(props){
         super(props);
+        this.chart_props = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#2469FF"}
         this.state = {current_date: "2020-01-01", cases_today_canada: 0, pt_selected: "ON", cases_today_pt: 0};
         this.chartRef = React.createRef();
         this.province_territory = [{SN:"ON", data:on_total_per_day_data, name:"Ontario"},
@@ -48,7 +49,7 @@ export class TestPost extends Component {
         const csv0 = await Papa.parse(await this.fetchCsv(canada_total_per_day_data));
         const data0 = await JSON.stringify(csv0);
         const chart0 = await document.querySelector('#canada_total_per_day_data').getContext('2d');
-        await createBarChart(data0,chart0);
+        await createBarChart(data0,chart0,this.chart_props);
 
         this.setState({
             current_date: this.formatDate(csv0.data[csv0.data.length-2][0]),
@@ -67,7 +68,7 @@ export class TestPost extends Component {
         const csv = await Papa.parse(await this.fetchCsv(result["data"]));
         const data = await JSON.stringify(csv);
         const chart = await document.querySelector('#pt_total_per_day_data').getContext('2d');
-        this.current_pt_chart = createBarChart(data,chart);
+        this.current_pt_chart = createBarChart(data,chart,this.chart_props);
 
         this.setState({
             pt_selected: result["name"],

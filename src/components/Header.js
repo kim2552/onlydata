@@ -1,4 +1,4 @@
-import logo from '../assets/onlydata-navbar-logo.png'
+import logo from '../assets/onlydata-logo.png'
 import Navbar from './Navbar'
 
 const Header = () => {

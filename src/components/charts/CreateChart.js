@@ -85,7 +85,7 @@ export function createLineChart(json_data,reference) {
     });
 }
 
-export function createBarChart(json_data,reference) {
+export function createBarChart(json_data,reference,chart_props) {
     let csv_data = JSON.parse(json_data).data;
 
     var indep_header = csv_data[0][1];  // Get the independent variable header
@@ -100,6 +100,10 @@ export function createBarChart(json_data,reference) {
             data_arr.push(csv_data[i][1].replace(/,+/g,'').replace(/['"]+/g, ''));
         }
     }
+    console.log(chart_props);
+    if(chart_props === undefined){
+        chart_props = {pointBackgroundColor: '#2469FF', borderColor: '#777', backgroundColor: '#2469FF'}
+    }
 
     return new Chart(reference, {
         type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -107,9 +111,9 @@ export function createBarChart(json_data,reference) {
             labels: label_arr,
             datasets:[{
                 data: data_arr,
-                pointBackgroundColor: "#ffb600",
-                borderColor:'#777',
-                backgroundColor: '#2469FF'
+                pointBackgroundColor: chart_props.pointBackgroundColor,
+                borderColor:chart_props.borderColor,
+                backgroundColor: chart_props.backgroundColor
             }]
         },
         options:{
