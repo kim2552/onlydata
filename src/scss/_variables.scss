@@ -1,5 +1,6 @@
 // Typography
-$font-family: 'Arial', 'sans-serif';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$font-family: 'Roboto', sans-serif;
 $font-size-lg: 16px;
 $font-size-md: 16px;
 $font-size-sm: 12px;
@@ -25,7 +26,7 @@ $cyan: #6cb2eb;
 
 
 // Color Scheme
-$primary-color: #d8d8d8;//#252D48;
+$primary-color: #dadada;//#252D48;
 $secondary-color: #000000;
 $tertiary-color: #2469FF;//#3C4562;
 
@@ -34,7 +35,7 @@ $tertiary-color: #2469FF;//#3C4562;
 $body-bg-color: $primary-color;
 $header-color: $secondary-color;
 $button-color: $tertiary-color;
-$card-color: $tertiary-color;
+$card-color: $white;
 $text-light-color: $white;
 $text-dark-color: $black;
 

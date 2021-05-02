@@ -24,13 +24,16 @@
         ul{
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         li{
             background-color: $button-color;
             padding: $button-padding-sm;
+            margin: $button-margin-sm;
             border-radius: 0.5rem;
             color: $text-light-color;
+            font-family: $font-family;
             cursor: pointer;
         }
     }
