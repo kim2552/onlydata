@@ -122,7 +122,7 @@ export class TestPost extends Component {
             <div className="carousel">
                 <ul>
                 {this.province_territory.map((element,index)=>(
-                    <li key={index} onClick={()=>this.GetPTData(element["SN"])}>{element["SN"]}</li>
+                    <li key={index} onClick={()=>this.GetPTData(element["SN"])} onMouseOver={()=>this.GetPTData(element["SN"])}>{element["SN"]}</li>
                 ))}
                 </ul>
             </div>
