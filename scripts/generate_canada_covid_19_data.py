@@ -50,7 +50,7 @@ category: available categories are numtoday, numtotal, numconf, numdeath, numact
 def create_covid19_vaccination_table(category="numtotal_all_administered"):
     response = urlopen(CSV_VAC_URL)
     csv_reader = csv.reader(codecs.iterdecode(response, 'utf-8'), delimiter=',')
-    f = open('canada-covid-19-vaccination-totals.csv','w', newline='')
+    f = open(FILE_PATH+'canada-covid-19-vaccination-totals.csv','w', newline='')
     writer = csv.writer(f)
     line_count = 0
     desired_row = 0
