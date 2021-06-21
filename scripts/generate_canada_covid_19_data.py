@@ -48,28 +48,6 @@ Creates a csv file that contains a table for all regions and the selected catego
 category: available categories are numtoday, numtotal, numconf, numdeath, numactive
 '''
 def create_covid19_vaccination_table(category="numtotal_all_administered"):
-    pop_response = urlopen(CSV_POPULATION_URL)
-    pop_csv_reader = csv.reader(codecs.iterdecode(pop_response, 'utf-8'), delimiter=',')
-    population_dict = {}
-
-    geo_col_num = 0
-    val_col_num = 0
-    index = 0
-    for row in pop_csv_reader:
-        if index == 0:
-            for index,header in enumerate(row):
-                if(header == "GEO"):
-                    geo_col_num = index
-                if(header == "VALUE"):
-                    val_col_num = index
-        else:
-            try:
-                if row[geo_col_num] in selection_list:
-                    population_dict[row[geo_col_num]] = row[val_col_num]
-            except Exception as e:
-                print(str(e))
-        index += 1
-
     response = urlopen(CSV_VAC_URL)
     csv_reader = csv.reader(codecs.iterdecode(response, 'utf-8'), delimiter=',')
     f = open('canada-covid-19-vaccination-totals.csv','w', newline='')
@@ -93,7 +71,7 @@ def create_covid19_vaccination_table(category="numtotal_all_administered"):
 
         line_count += 1
     for val in most_recent_values:
-        writer.writerow([val, most_recent_values[val][0], most_recent_values[val][1], population_dict[val]])  # name, total, date
+        writer.writerow([val, most_recent_values[val][0], most_recent_values[val][1]])  # name, total, date
 
     if(most_recent_date != "0"):               # Update the posts file with the most recent dated update
         update_date(most_recent_date)
