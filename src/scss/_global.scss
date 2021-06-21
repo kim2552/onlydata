@@ -43,3 +43,7 @@ a{
 .home-container, .about-container, .chart-container{
     animation: load_animation $loading-time;
 }
+
+.hide{
+    display:none;
+}

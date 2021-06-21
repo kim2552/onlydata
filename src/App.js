@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 
+import CanadaCovid19VaccineData from './components/posts/CanadaCovid19VaccineData';
 import CanadaCovid19Data from './components/posts/CanadaCovid19Data'
 import CanadaEmploymentData from './components/posts/CanadaEmploymentData'
 import CanadaTuitionFeeData from './components/posts/CanadaTuitionFeeData'
@@ -33,6 +34,9 @@ function App() {
           <Switch>
             <Route exact path="/about">
               <About></About>
+            </Route>
+            <Route exact path="/canada-covid-19-vaccination-data">
+              <CanadaCovid19VaccineData data={getJSONData("canada-covid-19-vaccination-data")}></CanadaCovid19VaccineData>
             </Route>
             <Route exact path="/canada-covid-19-data">
               <CanadaCovid19Data data={getJSONData("canada-covid-19-data")}></CanadaCovid19Data>

@@ -17,7 +17,7 @@ import qc_total_per_day_data from '../../assets/quebec-covid-19-data-per-day.csv
 import sk_total_per_day_data from '../../assets/saskatchewan-covid-19-data-per-day.csv'
 import yt_total_per_day_data from '../../assets/yukon-covid-19-data-per-day.csv'
 
-export class TestPost extends Component {
+export class CanadaCovid19Data extends Component {
     constructor(props){
         super(props);
         this.chart_props = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#2469FF"}
@@ -142,4 +142,4 @@ export class TestPost extends Component {
     }
 }
 
-export default TestPost
+export default CanadaCovid19Data
