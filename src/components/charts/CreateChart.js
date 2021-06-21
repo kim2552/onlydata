@@ -100,7 +100,6 @@ export function createBarChart(json_data,reference,chart_props) {
             data_arr.push(csv_data[i][1].replace(/,+/g,'').replace(/['"]+/g, ''));
         }
     }
-    console.log(chart_props);
     if(chart_props === undefined){
         chart_props = {pointBackgroundColor: '#2469FF', borderColor: '#777', backgroundColor: '#2469FF'}
     }
