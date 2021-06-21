@@ -35,7 +35,6 @@ def create_selection_covid19_data_per_day(selection="Canada", category="numtoday
         elif( row[1].lower() == selection.lower() ):
             writer.writerow([row[3], row[desired_row]]) # date, catagory value
             if(row[3] > most_recent_date):
-                print(row[3], most_recent_date, row[3] > most_recent_date)
                 most_recent_date = row[3]
             line_count += 1
 
