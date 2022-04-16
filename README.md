@@ -1,3 +1,3 @@
 ## OnlyData
-OnlyData is a data visualization application that aims at delivering information through regulary updated charts.
+OnlyData is a data visualization website that displays Canadian statistics.
 Written in React JS.

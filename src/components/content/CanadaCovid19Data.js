@@ -104,6 +104,7 @@ export class CanadaCovid19Data extends Component {
                         Recent Date{" ("+this.state.current_date+")"}
                         {": "}
                         {this.state.cases_today_canada}
+                        {" cases"}
                     </h3>
                 </div>
                 <canvas id="canada_total_per_day_data" ref={this.chartRef}></canvas>
@@ -117,6 +118,7 @@ export class CanadaCovid19Data extends Component {
                     Recent Date{" ("+this.state.current_date+")"}
                     {": "}
                     {this.state.cases_today_pt}
+                    {" cases"}
                 </h3>
             </div>
             <div className="carousel">
