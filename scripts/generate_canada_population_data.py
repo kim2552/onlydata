@@ -3,7 +3,7 @@ from urllib.request import urlopen
 import codecs
 import json
 
-FILE_PATH = "../src/assets/"
+FILE_PATH = "src/assets/"
 
 selection_list = [ "Canada", "British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario", "Quebec", "Newfoundland and Labrador", "New Brunswick", "Nova Scotia", "Prince Edward Island", "Yukon", "Northwest Territories", "Nunavut"]
 
