@@ -51,4 +51,5 @@ def update_date(new_date):
     json.dump(data, new_json_file)
     new_json_file.close()
 
-create_tuition_fee_all_current()
+if __name__ == '__main__':
+    create_tuition_fee_all_current()

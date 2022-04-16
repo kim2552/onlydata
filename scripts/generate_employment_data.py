@@ -77,5 +77,5 @@ def generate_employment_data():
     create_canada_employment_timeline()
     create_canada_unemployment_timeline()
 
-
-generate_employment_data()
+if __name__ == '__main__':
+    generate_employment_data()

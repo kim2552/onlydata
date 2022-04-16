@@ -98,4 +98,6 @@ def generate_canada_covid19_data():
     for selection in selection_list:
         create_selection_covid19_data_per_day(selection,"numtoday")
 
-generate_canada_covid19_data()
+if __name__ == '__main__':
+    generate_canada_covid19_data()
+    
