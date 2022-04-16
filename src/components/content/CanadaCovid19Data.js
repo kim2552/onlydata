@@ -97,27 +97,27 @@ export class CanadaCovid19Data extends Component {
             </div>
             <div className="chart-wrapper">
                 <div className="heading-wrapper">
-                    <h2>
-                        Cases Today{" ("+this.state.current_date+")"}
-                        {": "}
-                        {this.state.cases_today_canada}
-                    </h2>
+                    <h2>Daily Number of Confirmed Covid-19 Cases Canada</h2>
                 </div>
                 <div className="heading-wrapper">
-                    <h3>Daily Number of Confirmed Covid-19 Cases Canada</h3>
+                    <h3>
+                        Recent Date{" ("+this.state.current_date+")"}
+                        {": "}
+                        {this.state.cases_today_canada}
+                    </h3>
                 </div>
                 <canvas id="canada_total_per_day_data" ref={this.chartRef}></canvas>
             </div>
             <div className="chart-wrapper">
             <div className="heading-wrapper">
-                <h2>
-                    Cases Today{" ("+this.state.current_date+")"}
-                    {": "}
-                    {this.state.cases_today_pt}
-                </h2>
+                <h2>Daily Number of Confirmed Covid-19 Cases {this.state.pt_selected}</h2>
             </div>
             <div className="heading-wrapper">
-                <h3>Daily Number of Confirmed Covid-19 Cases {this.state.pt_selected}</h3>
+                <h3>
+                    Recent Date{" ("+this.state.current_date+")"}
+                    {": "}
+                    {this.state.cases_today_pt}
+                </h3>
             </div>
             <div className="carousel">
                 <ul>
