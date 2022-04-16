@@ -9,7 +9,7 @@
     .chart-wrapper{
         margin: $container-margin-lg;
         margin-top:0;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
         color: $text-dark-color;
     }
 
@@ -48,7 +48,7 @@
             padding: $button-padding-sm;
             margin: $button-margin-sm;
             border-radius: 0.5rem;
-            color: $text-light-color;
+            color: $text-dark-color;
             font-family: $font-family;
             cursor: pointer;
         }

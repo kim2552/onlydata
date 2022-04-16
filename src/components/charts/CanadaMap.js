@@ -7,8 +7,8 @@ export const CanadaMap = ({ data:{provinces}, vaccData}) => {
     const svgHeight=720
     const fixedTranslate={x: svgWidth/2-100, y: svgHeight/2+280}
 
-    const labelScaleColor = ["#6BDFDB","#5FCEE0","#53BDE6","#47ACEB","#3A9AF0","#2E89F6","#2278FB"]
-    const labelScaleValue = [0,100000,500000,1000000,2000000,5000000,10000000]
+    const labelScaleColor = ["#C8DEB1","#C7C8A0","#C6B18F","#C59A7E","#C3846D","#C26D5C","#C1564B","#C0403A","#BF2929"]
+    const labelScaleValue = [0, 10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 20000000]
 
     const provinceTextPosition={
         "CA-MB": {x: 284.2564, y: 420.6969, text: "Manitoba", width: 95},
@@ -87,7 +87,7 @@ export const CanadaMap = ({ data:{provinces}, vaccData}) => {
     return (
         <div>
             <div className="heading-wrapper">
-                <h3>Canada Total: {regionCases["CA"].number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h3>
+                <h3>Canada Total Population: {regionCases["CA"].number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h3>
             </div>
             <svg
             id="svg"
@@ -156,13 +156,14 @@ export const CanadaMap = ({ data:{provinces}, vaccData}) => {
                             return(
                             <g key={idx}>
                             <text
-                            transform={`translate(${100*(idx)},640)`}
+                            transform={`translate(${75*(idx)},640)`}
+                            fontSize={`0.75rem`}
                             >{val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</text>
                             <rect
                             fill={labelScaleColor[idx]}
                             width="100"
                             height="25"
-                            transform={`translate(${100*(idx)},600)`}
+                            transform={`translate(${75*(idx)},600)`}
                             ></rect>
                             </g>
                             )

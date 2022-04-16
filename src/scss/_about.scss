@@ -5,7 +5,6 @@
     text-align: left;
 
     margin: $description-margin-lg;
-    padding: $description-padding-lg;
     a{
         text-decoration: underline;
     }
@@ -14,13 +13,11 @@
 @media only screen and (max-width: 1280px) {
     .description-wrapper{
         margin: $description-margin-md;
-        padding: $description-padding-md;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .description-wrapper{
         margin: $description-margin-sm;
-        padding: $description-padding-sm;
     }
 }

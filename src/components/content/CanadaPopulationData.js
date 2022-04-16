@@ -3,12 +3,12 @@ import Papa from 'papaparse'
 import * as d3 from 'd3'
 import {feature} from 'topojson'
 
-import vacc_total_data from '../../assets/canada-covid-19-vaccination-totals.csv'
+import vacc_total_data from '../../assets/canada-population-data.csv'
 
 import {CanadaMap} from '../charts/CanadaMap'
 const topoJsonUrl = 'https://gist.githubusercontent.com/Brideau/2391df60938462571ca9/raw/f5a1f3b47ff671eaf2fb7e7b798bacfc6962606a/canadaprovtopo.json'
-
-export class CanadaCovid19VaccineData extends Component {
+var quarterlyDate=""
+export class CanadaPopulationData extends Component {
     constructor(props){
         super(props);
         this.chart_props = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#2469FF"}
@@ -58,11 +58,9 @@ export class CanadaCovid19VaccineData extends Component {
         if(this.state.topoData == null || this.state.vaccData == null){
             return(<h1 style={{textAlign: "center"}}>Loading...</h1>)
         }else{
+            quarterlyDate = this.state.vaccData.data[1][2]
             return(
                 <div className="chart-wrapper">
-                    <div className="heading-wrapper">
-                    <h3>Total Number of Administered Covid-19 Vaccine Doses [{this.state.vaccData.data[1][2]}]</h3>
-                    </div>
                     <CanadaMap
                     data={this.state.topoData}
                     vaccData={this.state.vaccData}
@@ -86,7 +84,7 @@ export class CanadaCovid19VaccineData extends Component {
                     {this.props.data.description}
                 </p>
                 <p>
-                    Last updated: {this.props.data.last_updated}
+                    Last updated: {quarterlyDate}
                 </p>
                 <a href={this.props.data.source} rel="noreferrer" target="_blank">source</a>
             </div>
@@ -95,4 +93,4 @@ export class CanadaCovid19VaccineData extends Component {
     }
 }
 
-export default CanadaCovid19VaccineData
+export default CanadaPopulationData
