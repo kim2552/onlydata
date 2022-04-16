@@ -2,7 +2,7 @@ import React from 'react'
 
 import {geoPath, geoTransverseMercator} from 'd3-geo'
 
-export const CanadaMap = ({ data:{provinces}, vaccData}) => {
+export const CanadaMap = ({ data:{provinces}, valData}) => {
     const svgWidth=800
     const svgHeight=720
     const fixedTranslate={x: svgWidth/2-100, y: svgHeight/2+280}
@@ -43,7 +43,7 @@ export const CanadaMap = ({ data:{provinces}, vaccData}) => {
         "CA": {number: 0, text: "CA", fullname: "Canada"}
     }
 
-    const fillVaccData = (dat) => {
+    const fillValData = (dat) => {
         Object.entries(regionCases).map( (el) => {
             dat.data.forEach(element => {
                 if(element[0] === el[1].fullname){
@@ -53,7 +53,7 @@ export const CanadaMap = ({ data:{provinces}, vaccData}) => {
             return 0
         })
     }
-    fillVaccData(vaccData)
+    fillValData(valData)
 
     const mapValueColorMapping = (num) => {
         for(let i=labelScaleColor.length-1; i>=0; i--){

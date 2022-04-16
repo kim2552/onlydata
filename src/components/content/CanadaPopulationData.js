@@ -3,7 +3,7 @@ import Papa from 'papaparse'
 import * as d3 from 'd3'
 import {feature} from 'topojson'
 
-import vacc_total_data from '../../assets/canada-population-data.csv'
+import population_total_data from '../../assets/canada-population-data.csv'
 
 import {CanadaMap} from '../charts/CanadaMap'
 const topoJsonUrl = 'https://gist.githubusercontent.com/Brideau/2391df60938462571ca9/raw/f5a1f3b47ff671eaf2fb7e7b798bacfc6962606a/canadaprovtopo.json'
@@ -12,7 +12,7 @@ export class CanadaPopulationData extends Component {
     constructor(props){
         super(props);
         this.chart_props = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#2469FF"}
-        this.state = {current_date: "2020-01-01", topoData: null, vaccData: null};
+        this.state = {current_date: "2020-01-01", topoData: null, valData: null};
         this.chartRef = React.createRef();
         this.current_pt_chart = null;
     }
@@ -33,10 +33,10 @@ export class CanadaPopulationData extends Component {
     }
 
     async GetVacData(){
-        const csv0 = await Papa.parse(await this.fetchCsv(vacc_total_data));
+        const csv0 = await Papa.parse(await this.fetchCsv(population_total_data));
 
         this.setState({
-            vaccData: csv0
+            valData: csv0
         });
     }
 
@@ -55,15 +55,15 @@ export class CanadaPopulationData extends Component {
     }
 
     loadMap(){
-        if(this.state.topoData == null || this.state.vaccData == null){
+        if(this.state.topoData == null || this.state.valData == null){
             return(<h1 style={{textAlign: "center"}}>Loading...</h1>)
         }else{
-            quarterlyDate = this.state.vaccData.data[1][2]
+            quarterlyDate = this.state.valData.data[1][2]
             return(
                 <div className="chart-wrapper">
                     <CanadaMap
                     data={this.state.topoData}
-                    vaccData={this.state.vaccData}
+                    valData={this.state.valData}
                     ></CanadaMap>
                 </div>
             )
