@@ -9,15 +9,19 @@ const CanadaEmploymentData = (props) => {
     const chartRef = React.createRef();
 
     async function GetData() {
+        const chartProps1 = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#64A433"}
+
         const csv0 = await Papa.parse(await fetchCsv(canada_employment_timeline_data));
         const data0 = await JSON.stringify(csv0);
         const chart0 = await document.querySelector('#canada_employment_timeline_data').getContext('2d');
-        await createBarChart(data0,chart0);
+        await createBarChart(data0,chart0,chartProps1);
+
+        const chartProps2 = {pointBackgroundColor: "#fff", borderColor: '#fff', backgroundColor: "#B23B2A"}
 
         const csv1 = await Papa.parse(await fetchCsv(canada_unemployment_timeline_data));
         const data1 = await JSON.stringify(csv1);
         const chart1 = await document.querySelector('#canada_unemployment_timeline_data').getContext('2d');
-        await createBarChart(data1,chart1);
+        await createBarChart(data1,chart1,chartProps2);
     }
 
     async function fetchCsv(csv_data) {
