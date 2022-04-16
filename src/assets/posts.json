@@ -12,7 +12,7 @@
             "id": 2,
             "title": "Canada Covid-19 Data",
             "slug": "canada-covid-19-data",
-            "description": "Charts display the current data regarding Covid-19 cases and in Canada. Covid-19 data is updated daily.",
+            "description": "Timeline of Covid-19 cases in Canada's provinces and territories. Updated on a daily basis.",
             "source": "https://health-infobase.canada.ca/covid-19/",
             "last_updated": "2022-04-13"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "title": "Canada Employment Data",
             "slug": "canada-employment-data",
-            "description": "Charts display the current data regarding emplyoment numbers in Canada. Data is updated monthly. Data type is seasonally adjusted and includes the age group of 15 years and over.",
+            "description": "Timeline of emplyoment/unemployment rates in Canada. Updated on a monthly basis.",
             "source": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028703",
             "last_updated": "2022-03-01"
         }
